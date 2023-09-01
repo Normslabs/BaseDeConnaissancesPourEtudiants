@@ -22,20 +22,53 @@ public class TestKnowledgeComponentProvider : AbstractService, IKnowledgeCompone
 <html>
 <head>
     <style>
+        html, body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            width: 99%;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .title,
+        .paragraph {
+            font-family: Arial, sans-serif;
+            margin-right: 20px;
+        }
+
+        .code {
+            font-family: 'Source Code Pro'
+        }
+
+        .technincal-term {
+            font-weight: bold;
+            font-style: italic;
+            color: blue;
+        }
     </style>
 </head>
 <body>
-    <div class=""container"">
-        <h3 class=""title"">EXPRESSIONS ET INSTRUCTIONS</h3>
+    <div class=""full-width container"">
+        <h2 class=""full-width text-center title"">EXPRESSIONS ET INSTRUCTIONS</h2>
         <p class=""paragraph"">
-            Comme en mathématiques, une expression est une valeur litérale, une variable, un appel de fonction, ou 
+            Comme en mathématiques, une <span class=""technincal-term"">expression</span> est une valeur litérale, une variable, un appel de fonction, ou 
             toute combinaison de ceux - ci dans une chaîne d'opérationsqui DOIT POUVOIR, pour un moment donné, être 
             ÉVALUÉ pour donner une valeur unique. On peut donc dire, même si ce n'est pas techniquement exact, qu'une
             expression 'retourne' une valeur unique lorsque exécuté dans un programme. Par exemple, les éléments 
             suivants sont tous des expressions:
         </p>
         <p class=""paragraph"">
-            <ul>
+            <ul class=""code"">
                 <li>2</li>
                 <li>""unString""</li>
                 <li>uneVariable</li>

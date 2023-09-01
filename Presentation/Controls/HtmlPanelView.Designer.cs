@@ -29,14 +29,13 @@ partial class HtmlPanelView {
         // 
         // splitPanelRightWebBox
         // 
+        splitPanelRightWebBox.AllowWebBrowserDrop = false;
         splitPanelRightWebBox.Dock = DockStyle.Fill;
         splitPanelRightWebBox.Location = new Point(0, 0);
         splitPanelRightWebBox.Name = "splitPanelRightWebBox";
-        splitPanelRightWebBox.ScrollBarsEnabled = true;
-        splitPanelRightWebBox.AllowWebBrowserDrop = false;
-        splitPanelRightWebBox.WebBrowserShortcutsEnabled = false;
         splitPanelRightWebBox.Size = new Size(644, 648);
         splitPanelRightWebBox.TabIndex = 0;
+        splitPanelRightWebBox.WebBrowserShortcutsEnabled = false;
         // 
         // HtmlPanelView
         // 
@@ -45,8 +44,8 @@ partial class HtmlPanelView {
         this.Controls.Add(splitPanelRightWebBox);
         this.Name = "HtmlPanelView";
         this.Size = new Size(644, 648);
+        this.Resize += this.HtmlPanelView_Resize;
         this.ResumeLayout(false);
-        this.PerformLayout();
     }
 
     #endregion

@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BaseDeConnaissancesEtudiants.Presentation;
-public partial class MainWindow : Form, IView<IKnowledgeComponentProvider> {
+public partial class MainWindow : Form, IView {
     public Guid UniqueId { get; private set; }
     public ApplicationComponentType ComponentType { get { return ApplicationComponentType.SERVICE; } }
     public string Discriminant { get; private set; }
@@ -138,16 +138,8 @@ public partial class MainWindow : Form, IView<IKnowledgeComponentProvider> {
         this.htmlContentPanel.Render(converted);
     }
 
-    public void FillKnowledgeComponentList(IKnowledgeComponentProvider? knowledgeComponentProvider) {
-        this.centerSplitPaneLeftListBox.Items.Clear();
-        if (knowledgeComponentProvider is not null) {
-            foreach (IKnowledgeComponent element in knowledgeComponentProvider.GetKnowledgeComponentsList()) {
-                _ = this.centerSplitPaneLeftListBox.Items.Add(element);
-            }
-        }
-    }
-
-    public void Render(IKnowledgeComponentProvider knowledgeComponentProvider) {
-        this.FillKnowledgeComponentList(knowledgeComponentProvider);
+    public void FillKnowledgeComponentList(List<IKnowledgeComponent> knowledgeComponents) {
+        this.centerSplitPaneLeftListBox.ItemHeight = 40;
+        this.centerSplitPaneLeftListBox.DataSource = knowledgeComponents;
     }
 }

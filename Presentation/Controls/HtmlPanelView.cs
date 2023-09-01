@@ -26,4 +26,9 @@ public partial class HtmlPanelView : UserControl {
         this.Visible = true;
         this.splitPanelRightWebBox.DocumentText = contentObject;
     }
+
+    private void HtmlPanelView_Resize(object sender, EventArgs e) {
+        // resize the internal WebBrowser component
+        this.splitPanelRightWebBox.ClientSize = new Size(this.ClientSize.Width, this.ClientSize.Height);
+    }
 }

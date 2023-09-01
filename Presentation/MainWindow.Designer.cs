@@ -125,11 +125,11 @@ partial class MainWindow {
         centerSplitPaneLeftListBox.Dock = DockStyle.Fill;
         centerSplitPaneLeftListBox.FormattingEnabled = true;
         centerSplitPaneLeftListBox.IntegralHeight = false;
-        centerSplitPaneLeftListBox.ItemHeight = 20;
+        centerSplitPaneLeftListBox.ItemHeight = 40;
         centerSplitPaneLeftListBox.Location = new Point(0, 0);
         centerSplitPaneLeftListBox.Name = "centerSplitPaneLeftListBox";
         centerSplitPaneLeftListBox.ScrollAlwaysVisible = true;
-        centerSplitPaneLeftListBox.Size = new Size(294, 473);
+        centerSplitPaneLeftListBox.Size = new Size(200, 200);
         centerSplitPaneLeftListBox.TabIndex = 0;
         centerSplitPaneLeftListBox.SelectedIndexChanged += this.CenterSplitPaneLeftListBox_SelectedIndexChanged;
         // 
