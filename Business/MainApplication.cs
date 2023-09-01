@@ -1,4 +1,5 @@
 ﻿using BaseDeConnaissancesEtudiants.Business.Interfaces;
+using BaseDeConnaissancesEtudiants.DataAccess.Interfaces;
 using BaseDeConnaissancesEtudiants.Presentation;
 using NSAIL;
 using NSAIL.Exceptions;
@@ -19,7 +20,8 @@ public class MainApplication : AbstractApplication {
         ApplicationConfiguration.Initialize();
         this.Components.RegisterService(new TestKnowledgeComponentProvider(this));
         this.Components.RegisterView(new MainWindow(this));
-        this.Components.GetViewByType<MainWindow>()?.FillKnowledgeComponentList(this.Components.GetServiceByType<IKnowledgeComponentProvider>());
+        List<IKnowledgeComponent> knowledgeComponents = this.Components.GetServiceByType<IKnowledgeComponentProvider>()?.GetKnowledgeComponentsList() ?? new List<IKnowledgeComponent>();
+        this.Components.GetViewByType<MainWindow>()?.FillKnowledgeComponentList(knowledgeComponents);
     }
 
     public override void Run() {

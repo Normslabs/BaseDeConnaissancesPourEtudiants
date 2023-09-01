@@ -55,17 +55,49 @@ public class TestKnowledgeComponentProvider : AbstractService, IKnowledgeCompone
             font-style: italic;
             color: blue;
         }
+        .quote {
+            font-style: italic;
+            padding: 0 20px 0 20px;
+        }
     </style>
 </head>
 <body>
-    <div class=""full-width container"">
+    <div class=""container"">
         <h2 class=""full-width text-center title"">EXPRESSIONS ET INSTRUCTIONS</h2>
+        <p class=""quote"">
+            In computer science, an expression is a syntactic entity in a programming language that may be evaluated 
+            to determine its value.[1] It is a combination of one or more constants, variables, functions, and operators 
+            that the programming language interprets (according to its particular rules of precedence and of association) 
+            and computes to produce (""to return"", in a stateful environment) another value. This process, for mathematical 
+            expressions, is called evaluation. In simple settings, the resulting value is usually one of various primitive 
+            types, such as string, boolean, or numerical (such as integer, floating-point, or complex).
+            Expressions are often contrasted with statements—syntactic entities that have no value (an instruction).<br/>
+            <bold>- Wikipedia</bold>
+        </p>
         <p class=""paragraph"">
-            Comme en mathématiques, une <span class=""technincal-term"">expression</span> est une valeur litérale, une variable, un appel de fonction, ou 
-            toute combinaison de ceux - ci dans une chaîne d'opérationsqui DOIT POUVOIR, pour un moment donné, être 
-            ÉVALUÉ pour donner une valeur unique. On peut donc dire, même si ce n'est pas techniquement exact, qu'une
-            expression 'retourne' une valeur unique lorsque exécuté dans un programme. Par exemple, les éléments 
-            suivants sont tous des expressions:
+            Une <span class=""technincal-term"">instruction</span> est une opération ou une suite d'opérations qui
+            réalisent quelque chose. En C#, Java PHP et plusieurs autres langages, les instructions sont
+            séparées par des points-virgules. Une instruction peut être, mais n'est pas forcément, 
+            <span class=""technincal-term"">évaluable</span>. Par exemple, les éléments suivants sont des instructions:
+        </p>
+        <p class=""paragraph"">
+            <ul class=""code"">
+                <li>int maVariable;		// déclaration d'une variable</li>
+                <li>maVariable = 5;		// assignation d'une valeur à une variable</li>
+                <li>objet.Methode();	// appel de fonction/méthode</li>
+            </ul>
+        </p>
+        <p class=""paragraph"">
+            Contrairement aux instructions, les <span class=""technincal-term"">expression</span> <bold>DOIVENT</bold>
+            être <span class=""technincal-term"">évaluables</span>. C'est-à-dire qu'on doit pouvoir calculer
+            la valeur de l'entièreté de l'expression. On peut donc dire, même si ce n'est pas techniquement exact, qu'une
+            expression 'retourne' une valeur unique lorsque exécutée dans un programme.
+        </p>
+        <p>
+            Les expressions sont composées d'une combinaison d'une ou plusieurs <span class=""technincal-term"">valeurs litérales</span>,
+            <span class=""technincal-term"">variables</span>, <span class=""technincal-term"">constantes</span>,
+            appels de <span class=""technincal-term"">fonction/méthode</span> et <span class=""technincal-term"">opérateurs</span>.
+            Par exemple, les éléments suivants sont tous des expressions:
         </p>
         <p class=""paragraph"">
             <ul class=""code"">
@@ -77,21 +109,9 @@ public class TestKnowledgeComponentProvider : AbstractService, IKnowledgeCompone
             </ul>
         </p>
         <p class=""paragraph"">
-            Chacun de ces exemples 'retourne' une valeur lorsqu'exécuté dans un programme: les variables sont évaluées 
-            pour leur valeur à ce moment là, les appels de fonction sont exécutés et retournent une valeur, et l'ensemble 
-            des opérations sur ces éléments est aussi calculable sur le champ.
-        </p>
-        <p class=""paragraph"">
-            Une instruction est une commande ou une opération qui 'fait' quelque chose. En C#, les instructions sont 
-            séparées par des points-virgules. Contrairement à une expression, une instruction peut, MAIS N'EST PAS 
-            OBLIGÉ d'être évaluable. Par exemple, les éléments suivants sont des instructions:
-        </p>
-        <p class=""paragraph"">
-            <ul>
-                <li>int maVariable;		// déclaration d'une variable</li>
-                <li>maVariable = 5;		// assignation d'une valeur à une variable</li>
-                <li>objet.Methode();	// appel de méthode (l'appel lui-même est aussi une expression)</li>
-            </ul>
+            Chacun de ces exemples 'retourne' une valeur lorsqu'exécuté dans un programme: les variables sont évaluées
+            à leur valeur à ce moment là, les appels de fonction sont exécutés et retournent une valeur, et l'ensemble
+            des opérations sur ces éléments est aussi calculée.
         </p>
     </div>
 </body>
