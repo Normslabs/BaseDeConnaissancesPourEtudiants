@@ -1,7 +1,7 @@
 # Base de connaissances pour étudiants
 
-[![Generic badge](https://img.shields.io/badge/Version-0.1.1-orange.svg)](https://shields.io/)
-[![GitHub latest commit](https://badgen.net/github/last-commit/MEBoury-CollegeLasalle/BaseDeConnaissancesPourEtudiants)](https://GitHub.com/MEBoury-CollegeLasalle/BaseDeConnaissancesPourEtudiants/commit/)
+[![Generic badge](https://img.shields.io/badge/Version-0.1.0-orange.svg)](https://shields.io/)
+[![GitHub latest commit](https://badgen.net/github/last-commit/Normslabs/BaseDeConnaissancesPourEtudiants)](https://GitHub.com/Normslabs/BaseDeConnaissancesPourEtudiants/commit/)
 [![Generic badge](https://img.shields.io/badge/Articles-0-red.svg)](https://shields.io/)
 
 ### Un projet qui allie démonstrations et utilité!
@@ -58,3 +58,5 @@ Vous avez apprécié et voulez m'offrir un café?<br/>
 - [ ] Refactoriser le modèle d'article pour supporter des catégories/filtres
 - [ ] Ajouter un système de recherche/filtrage des articles
 - [ ] Completer l'intégration de BdD
+- [ ] Documentation, documentation, documentation
+- [ ] Version Java?
